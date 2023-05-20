@@ -62,4 +62,4 @@ df = df.sort_values(by=["Artist", "Year"])
 df.to_csv('discogs-collection.csv', index=False)
 
 print ("DONE! Discogs collection exported to discogs-collection.csv")
-input("Press Enter to continue.")
+input("Press Enter to complete.")
