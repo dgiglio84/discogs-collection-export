@@ -12,7 +12,7 @@ d = discogs_client.Client('my_user_agent/1.0', user_token=MyToken)
 me = d.identity()
 
 #Grabs collection
-print ("Grabbing collection...")
+print ("Grabbing collection data...")
 Collection = [r.release for r in me.collection_folders[0].releases]
 
 #Creates dataframe and column names
@@ -61,4 +61,5 @@ df = df.sort_values(by=["Artist", "Year"])
 #Exports dataframe to CSV
 df.to_csv('discogs-collection.csv', index=False)
 
-print ("DONE! Collection exported to discogs-collection.csv")
+print ("DONE! Discogs collection exported to discogs-collection.csv")
+input("Press Enter to continue.")
